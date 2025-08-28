@@ -1,0 +1,90 @@
+@page "/lenders"
+@using Models
+@using Services
+@inject LenderService LenderService
+@inject DialogService DialogService
+@inject NotificationService NotificationService
+
+<PageTitle>Lenders</PageTitle>
+
+<RadzenDataGrid @ref="grid" Data="@lenders" TItem="Lender" AllowSorting="true" AllowFiltering="true" PagerHorizontalAlign="HorizontalAlign.Center">
+    <Columns>
+        <RadzenDataGridColumn Property="Id" Title="Id" Width="80px" />
+        <RadzenDataGridColumn Property="FullName" Title="Full Name" />
+        <RadzenDataGridColumn Property="Email" Title="Email" />
+        <RadzenDataGridColumn Title="Actions" Width="150px">
+            <Template Context="lender">
+                <RadzenButton ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Small" Text="Edit" Click="@(() => EditLender(lender))" />
+                <RadzenButton ButtonStyle="ButtonStyle.Danger" Size="ButtonSize.Small" Text="Delete" Click="@(() => DeleteLender(lender))" />
+            </Template>
+        </RadzenDataGridColumn>
+    </Columns>
+</RadzenDataGrid>
+
+<RadzenButton Text="Add Lender" Click="AddLender" />
+
+@code {
+    List<Lender> lenders = [];
+    RadzenDataGrid<Lender> grid = null!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        lenders = await LenderService.GetAllAsync();
+    }
+
+    async Task AddLender()
+    {
+        var result = await DialogService.OpenAsync<LenderForm>("Add Lender", new Dictionary<string, object> { { "Lender", new Lender() } });
+        if (result is Lender newLender)
+        {
+            try
+            {
+                await LenderService.AddAsync(newLender);
+                lenders = await LenderService.GetAllAsync();
+                await grid.Reload();
+                NotificationService.Notify(NotificationSeverity.Success, "Lender added successfully.");
+            }
+            catch (Exception ex)
+            {
+                NotificationService.Notify(NotificationSeverity.Error, ex.Message);
+            }
+        }
+    }
+
+    async Task EditLender(Lender lender)
+    {
+        var result = await DialogService.OpenAsync<LenderForm>("Edit Lender", new Dictionary<string, object> { { "Lender", lender } });
+        if (result is Lender updatedLender)
+        {
+            try
+            {
+                await LenderService.UpdateAsync(updatedLender);
+                await grid.Reload();
+                NotificationService.Notify(NotificationSeverity.Success, "Lender updated successfully.");
+            }
+            catch (Exception ex)
+            {
+                NotificationService.Notify(NotificationSeverity.Error, ex.Message);
+            }
+        }
+    }
+
+    async Task DeleteLender(Lender lender)
+    {
+        var confirmed = await DialogService.Confirm("Are you sure you want to delete this lender?", "Confirm Delete");
+        if (confirmed == true)
+        {
+            try
+            {
+                await LenderService.DeleteAsync(lender.Id);
+                lenders.Remove(lender);
+                await grid.Reload();
+                NotificationService.Notify(NotificationSeverity.Success, "Lender deleted successfully.");
+            }
+            catch (Exception ex)
+            {
+                NotificationService.Notify(NotificationSeverity.Error, ex.Message);
+            }
+        }
+    }
+}

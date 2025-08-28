@@ -1,0 +1,49 @@
+﻿@inherits LayoutComponentBase
+@implements IDisposable
+
+<RadzenLayout Style="height:100vh">
+    <RadzenHeader>
+        <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0">
+            <RadzenSidebarToggle Click="ToggleSidebar" />
+            <RadzenLabel Text="Library Management" />
+        </RadzenStack>
+    </RadzenHeader>
+    <RadzenSidebar @ref="@sidebar" Responsive="false">
+        <RadzenPanelMenu>
+            <RadzenPanelMenuItem Text="Books" Path="books" />
+            <RadzenPanelMenuItem Text="Lenders" Path="lenders" />
+            <RadzenPanelMenuItem Text="Loans" Path="loans" />
+        </RadzenPanelMenu>
+    </RadzenSidebar>
+    <RadzenBody>
+        @Body
+    </RadzenBody>
+</RadzenLayout>
+
+@code {
+    private RadzenSidebar sidebar;
+    private bool disposedValue;
+
+    void ToggleSidebar()
+    {
+        sidebar?.Toggle();
+    }
+
+    protected virtual void Dispose(bool disposing)
+    {
+        if (!disposedValue)
+        {
+            if (disposing)
+            {
+                sidebar = null;
+            }
+            disposedValue = true;
+        }
+    }
+
+    public void Dispose()
+    {
+        Dispose(disposing: true);
+        GC.SuppressFinalize(this);
+    }
+}

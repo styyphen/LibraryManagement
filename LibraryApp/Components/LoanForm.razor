@@ -1,0 +1,45 @@
+@using Models
+@using Services
+@inject DialogService DialogService
+@inject BookService BookService
+@inject LenderService LenderService
+
+<RadzenDialog>
+    <ChildContent>
+        <RadzenStack Gap="1rem">
+            <RadzenFormField Text="Book" Variant="Variant.Outlined">
+                <RadzenDropDown Data="@books" TextProperty="Title" ValueProperty="Id" @bind-Value="selectedBookId" AllowFiltering="true" />
+            </RadzenFormField>
+            <RadzenFormField Text="Lender" Variant="Variant.Outlined">
+                <RadzenDropDown Data="@lenders" TextProperty="FullName" ValueProperty="Id" @bind-Value="selectedLenderId" AllowFiltering="true" />
+            </RadzenFormField>
+            <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.End" Gap="0.5rem">
+                <RadzenButton Text="Create Loan" />
+                <RadzenButton ButtonStyle="ButtonStyle.Secondary" Text="Cancel" Click="Cancel" />
+            </RadzenStack>
+        </RadzenStack>
+    </ChildContent>
+</RadzenDialog>
+
+@code {
+    List<Book> books = [];
+    List<Lender> lenders = [];
+    int selectedBookId;
+    int selectedLenderId;
+
+    protected override async Task OnInitializedAsync()
+    {
+        books = await BookService.GetAllAsync();
+        lenders = await LenderService.GetAllAsync();
+    }
+
+    async Task Submit()
+    {
+       // await DialogService.CloseAsync((selectedBookId, selectedLenderId));
+    }
+
+    void Cancel()
+    {
+        DialogService.Close(null);
+    }
+}

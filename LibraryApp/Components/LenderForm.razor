@@ -1,0 +1,38 @@
+@using Models
+@inject DialogService DialogService
+
+<RadzenDialog>
+    <ChildContent>
+        <EditForm Model="@Lender" OnValidSubmit="Submit">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <RadzenStack Gap="1rem">
+                <RadzenFormField Text="Full Name" Variant="Variant.Outlined">
+                    <RadzenTextBox @bind-Value="Lender.FullName" />
+                </RadzenFormField>
+                <RadzenFormField Text="Email" Variant="Variant.Outlined">
+                    <RadzenTextBox @bind-Value="Lender.Email" />
+                </RadzenFormField>
+                <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.End" Gap="0.5rem">
+                    <RadzenButton ButtonType="ButtonType.Submit" Text="Save" />
+                    <RadzenButton ButtonStyle="ButtonStyle.Secondary" Text="Cancel" Click="Cancel" />
+                </RadzenStack>
+            </RadzenStack>
+        </EditForm>
+    </ChildContent>
+</RadzenDialog>
+
+@code {
+    [Parameter] public Lender Lender { get; set; } = new();
+
+    void Submit()
+    {
+        DialogService.Close(Lender);
+    }
+
+    void Cancel()
+    {
+        DialogService.Close(null);
+    }
+}

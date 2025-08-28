@@ -1,0 +1,90 @@
+@page "/loans"
+@using Models
+@using Services
+@inject LoanService LoanService
+@inject DialogService DialogService
+@inject NotificationService NotificationService
+
+<PageTitle>Loans</PageTitle>
+
+<RadzenDataGrid @ref="grid" Data="@loans" TItem="Loan" AllowSorting="true" AllowFiltering="true" PagerHorizontalAlign="HorizontalAlign.Center" RowRender="@RowRender">
+    <Columns>
+        <RadzenDataGridColumn Property="Id" Title="Id" Width="80px" />
+        <RadzenDataGridColumn Property="Book.Title" Title="Book" />
+        <RadzenDataGridColumn Property="Lender.FullName" Title="Lender" />
+        <RadzenDataGridColumn Property="LoanDate" Title="Loan Date" FormatString="{0:yyyy-MM-dd}" />
+        <RadzenDataGridColumn Property="DueDate" Title="Due Date" FormatString="{0:yyyy-MM-dd}" />
+        <RadzenDataGridColumn Property="ReturnDate" Title="Return Date" FormatString="{0:yyyy-MM-dd}" />
+        <RadzenDataGridColumn Title="Status">
+            <Template Context="loan">
+                @(loan.ReturnDate == null ? "Active" : "Returned")
+            </Template>
+        </RadzenDataGridColumn>
+        <RadzenDataGridColumn Title="Actions" Width="100px">
+            <Template Context="loan">
+                @if (loan.ReturnDate == null)
+                {
+                    <RadzenButton ButtonStyle="ButtonStyle.Success" Size="ButtonSize.Small" Text="Return" Click="@(() => ReturnLoan(loan))" />
+                }
+            </Template>
+        </RadzenDataGridColumn>
+    </Columns>
+</RadzenDataGrid>
+
+<RadzenButton Text="Create Loan" Click="CreateLoan" />
+
+@code {
+    List<Loan> loans = [];
+    RadzenDataGrid<Loan> grid = null!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        loans = await LoanService.GetAllAsync();
+    }
+
+    async Task CreateLoan()
+    {
+        var result = await DialogService.OpenAsync<LoanForm>("Create Loan");
+        if (result is (int bookId, int lenderId))
+        {
+            try
+            {
+                await LoanService.CreateLoanAsync(bookId, lenderId);
+                loans = await LoanService.GetAllAsync();
+                await grid.Reload();
+                NotificationService.Notify(NotificationSeverity.Success, "Loan created successfully.");
+            }
+            catch (Exception ex)
+            {
+                NotificationService.Notify(NotificationSeverity.Error, ex.Message);
+            }
+        }
+    }
+
+    async Task ReturnLoan(Loan loan)
+    {
+        var confirmed = await DialogService.Confirm("Return this loan?", "Confirm Return");
+        if (confirmed == true)
+        {
+            try
+            {
+                await LoanService.ReturnLoanAsync(loan.Id);
+                loans = await LoanService.GetAllAsync();
+                await grid.Reload();
+                NotificationService.Notify(NotificationSeverity.Success, "Loan returned successfully.");
+            }
+            catch (Exception ex)
+            {
+                NotificationService.Notify(NotificationSeverity.Error, ex.Message);
+            }
+        }
+    }
+
+    void RowRender(RowRenderEventArgs<Loan> args)
+    {
+        if (args.Data.ReturnDate == null && args.Data.DueDate < DateTime.UtcNow)
+        {
+            args.Attributes.Add("style", "background-color: pink;");
+        }
+    }
+}

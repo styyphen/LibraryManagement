@@ -1,0 +1,94 @@
+@page "/books"
+@using Models
+@using Services
+@inject BookService BookService
+@inject DialogService DialogService
+@inject NotificationService NotificationService
+
+<PageTitle>Books</PageTitle>
+
+<RadzenDataGrid @ref="grid" Data="@books" TItem="Book" AllowSorting="true" AllowFiltering="true" PagerHorizontalAlign="HorizontalAlign.Center">
+    <Columns>
+        <RadzenDataGridColumn Property="Id" Title="Id" Width="80px" />
+        <RadzenDataGridColumn Property="ISBN" Title="ISBN" />
+        <RadzenDataGridColumn Property="Title" Title="Title" />
+        <RadzenDataGridColumn Property="Author" Title="Author" />
+        <RadzenDataGridColumn Property="PublishedYear" Title="Year" Width="80px" />
+        <RadzenDataGridColumn Property="TotalCopies" Title="Total" Width="80px" />
+        <RadzenDataGridColumn Property="CopiesAvailable" Title="Available" Width="100px" />
+        <RadzenDataGridColumn Title="Actions" Width="150px">
+            <Template Context="book">
+                <RadzenButton ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Small" Text="Edit" Click="@(() => EditBook(book))" />
+                <RadzenButton ButtonStyle="ButtonStyle.Danger" Size="ButtonSize.Small" Text="Delete" Click="@(() => DeleteBook(book))" />
+            </Template>
+        </RadzenDataGridColumn>
+    </Columns>
+</RadzenDataGrid>
+
+<RadzenButton Text="Add Book" Click="AddBook" />
+
+@code {
+    List<Book> books = [];
+    RadzenDataGrid<Book> grid = null!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        books = await BookService.GetAllAsync();
+    }
+
+    async Task AddBook()
+    {
+        var result = await DialogService.OpenAsync<BookForm>("Add Book", new Dictionary<string, object> { { "Book", new Book() } });
+        if (result is Book newBook)
+        {
+            try
+            {
+                await BookService.AddAsync(newBook);
+                books = await BookService.GetAllAsync();
+                await grid.Reload();
+                NotificationService.Notify(NotificationSeverity.Success, "Book added successfully.");
+            }
+            catch (Exception ex)
+            {
+                NotificationService.Notify(NotificationSeverity.Error, ex.Message);
+            }
+        }
+    }
+
+    async Task EditBook(Book book)
+    {
+        var result = await DialogService.OpenAsync<BookForm>("Edit Book", new Dictionary<string, object> { { "Book", book } });
+        if (result is Book updatedBook)
+        {
+            try
+            {
+                await BookService.UpdateAsync(updatedBook);
+                await grid.Reload();
+                NotificationService.Notify(NotificationSeverity.Success, "Book updated successfully.");
+            }
+            catch (Exception ex)
+            {
+                NotificationService.Notify(NotificationSeverity.Error, ex.Message);
+            }
+        }
+    }
+
+    async Task DeleteBook(Book book)
+    {
+        var confirmed = await DialogService.Confirm("Are you sure you want to delete this book?", "Confirm Delete");
+        if (confirmed == true)
+        {
+            try
+            {
+                await BookService.DeleteAsync(book.Id);
+                books.Remove(book);
+                await grid.Reload();
+                NotificationService.Notify(NotificationSeverity.Success, "Book deleted successfully.");
+            }
+            catch (Exception ex)
+            {
+                NotificationService.Notify(NotificationSeverity.Error, ex.Message);
+            }
+        }
+    }
+}

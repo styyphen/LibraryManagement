@@ -1,0 +1,28 @@
+@using LibraryApp.Components.Layout
+@using Microsoft.AspNetCore.Components.Authorization
+<CascadingAuthenticationState>
+@* App.razor *@
+<RadzenTheme Theme="material" />
+<ErrorBoundary>
+<ChildContent>
+<Router AppAssembly="@typeof(Program).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+    </Found>
+    <NotFound>
+        <PageTitle>Not found</PageTitle>
+        <LayoutView Layout="@typeof(MainLayout)">
+            <p role="alert">Sorry, there's nothing at this address.</p>
+        </LayoutView>
+    </NotFound>
+</Router>
+</ChildContent>
+<ErrorContent>
+    <div class="alert alert-danger">
+        <h2>An error has occurred</h2>
+        <p>Please try refreshing the page.</p>
+    </div>
+</ErrorContent>
+</ErrorBoundary>
+</CascadingAuthenticationState>
