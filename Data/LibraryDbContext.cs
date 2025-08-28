@@ -5,11 +5,21 @@ namespace Data;
 
 public class LibraryDbContext : DbContext
 {
+    public LibraryDbContext(DbContextOptions<LibraryDbContext> options) : base(options)
+    {
+    }
+    
     public DbSet<Book> Books { get; set; } = null!;
     public DbSet<Lender> Lenders { get; set; } = null!;
     public DbSet<Loan> Loans { get; set; } = null!;
-
-    public LibraryDbContext(DbContextOptions<LibraryDbContext> options) : base(options) { }
+    
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        if (!optionsBuilder.IsConfigured)
+        {
+            optionsBuilder.UseInMemoryDatabase("Library");
+        }
+    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -27,4 +37,5 @@ public class LibraryDbContext : DbContext
             .HasForeignKey(l => l.LenderId)
             .OnDelete(DeleteBehavior.Restrict);
     }
+    
 }

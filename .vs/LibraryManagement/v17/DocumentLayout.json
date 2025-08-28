@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F55188AD-30FB-4B14-BE2D-977FB2FD007B}|LibraryManagement.Tests\\LibraryManagement.Tests.csproj|c:\\dev\\yesterday\\librarymanagement\\librarymanagement.tests\\bookservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F55188AD-30FB-4B14-BE2D-977FB2FD007B}|LibraryManagement.Tests\\LibraryManagement.Tests.csproj|solutionrelative:librarymanagement.tests\\bookservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26024591-A457-4242-8462-26F24421CC73}|LibraryApp\\LibraryApp.csproj|c:\\dev\\yesterday\\librarymanagement\\libraryapp\\pages\\home.razor||{93FA4DC3-61EC-47AF-B0BA-50CAD3CAF049}",
+      "RelativeMoniker": "D:0:0:{26024591-A457-4242-8462-26F24421CC73}|LibraryApp\\LibraryApp.csproj|solutionrelative:libraryapp\\pages\\home.razor||{93FA4DC3-61EC-47AF-B0BA-50CAD3CAF049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26024591-A457-4242-8462-26F24421CC73}|LibraryApp\\LibraryApp.csproj|c:\\dev\\yesterday\\librarymanagement\\libraryapp\\pages\\books.razor||{93FA4DC3-61EC-47AF-B0BA-50CAD3CAF049}",
+      "RelativeMoniker": "D:0:0:{26024591-A457-4242-8462-26F24421CC73}|LibraryApp\\LibraryApp.csproj|solutionrelative:libraryapp\\pages\\books.razor||{93FA4DC3-61EC-47AF-B0BA-50CAD3CAF049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26024591-A457-4242-8462-26F24421CC73}|LibraryApp\\LibraryApp.csproj|c:\\dev\\yesterday\\librarymanagement\\libraryapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26024591-A457-4242-8462-26F24421CC73}|LibraryApp\\LibraryApp.csproj|solutionrelative:libraryapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BookServiceTests.cs",
+              "DocumentMoniker": "C:\\DEV\\YESTERDAY\\LibraryManagement\\LibraryManagement.Tests\\BookServiceTests.cs",
+              "RelativeDocumentMoniker": "LibraryManagement.Tests\\BookServiceTests.cs",
+              "ToolTip": "C:\\DEV\\YESTERDAY\\LibraryManagement\\LibraryManagement.Tests\\BookServiceTests.cs",
+              "RelativeToolTip": "LibraryManagement.Tests\\BookServiceTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T18:17:58.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\DEV\\YESTERDAY\\LibraryManagement\\LibraryApp\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "LibraryApp\\Pages\\Home.razor",
+              "ToolTip": "C:\\DEV\\YESTERDAY\\LibraryManagement\\LibraryApp\\Pages\\Home.razor",
+              "RelativeToolTip": "LibraryApp\\Pages\\Home.razor",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-28T18:17:52.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Books.razor",
+              "DocumentMoniker": "C:\\DEV\\YESTERDAY\\LibraryManagement\\LibraryApp\\Pages\\Books.razor",
+              "RelativeDocumentMoniker": "LibraryApp\\Pages\\Books.razor",
+              "ToolTip": "C:\\DEV\\YESTERDAY\\LibraryManagement\\LibraryApp\\Pages\\Books.razor",
+              "RelativeToolTip": "LibraryApp\\Pages\\Books.razor",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-28T18:14:42.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\DEV\\YESTERDAY\\LibraryManagement\\LibraryApp\\Program.cs",
+              "RelativeDocumentMoniker": "LibraryApp\\Program.cs",
+              "ToolTip": "C:\\DEV\\YESTERDAY\\LibraryManagement\\LibraryApp\\Program.cs",
+              "RelativeToolTip": "LibraryApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T18:14:36.568Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

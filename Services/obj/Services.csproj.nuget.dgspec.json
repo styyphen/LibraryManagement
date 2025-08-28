@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\DEV\\YESTERDAY\\LibraryManagement\\Services\\Services.csproj": {}
+    "c:\\DEV\\YESTERDAY\\LibraryManagement\\Services\\Services.csproj": {}
   },
   "projects": {
     "C:\\DEV\\YESTERDAY\\LibraryManagement\\Data\\Data.csproj": {
@@ -32,8 +32,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj": {
-                "projectPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj"
+              "c:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj": {
+                "projectPath": "c:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj"
               }
             }
           }
@@ -69,7 +69,7 @@
             },
             "Microsoft.AspNetCore.Cors": {
               "target": "Package",
-              "version": "(, )"
+              "version": "[2.3.0, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -77,9 +77,9 @@
               "target": "Package",
               "version": "[9.0.8, )"
             },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
-              "version": "[9.0.8, )"
+              "version": "[9.*-*, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -112,14 +112,14 @@
         }
       }
     },
-    "C:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj": {
+    "c:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj",
+        "projectUniqueName": "c:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj",
+        "projectPath": "c:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj",
         "packagesPath": "C:\\Users\\steph\\.nuget\\packages\\",
-        "outputPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\obj\\",
+        "outputPath": "c:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -173,15 +173,11 @@
             },
             "Microsoft.AspNetCore.Cors": {
               "target": "Package",
-              "version": "(, )"
+              "version": "[2.3.0, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
-              "target": "Package",
-              "version": "[9.0.8, )"
-            },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[9.0.8, )"
             },
@@ -216,14 +212,14 @@
         }
       }
     },
-    "C:\\DEV\\YESTERDAY\\LibraryManagement\\Services\\Services.csproj": {
+    "c:\\DEV\\YESTERDAY\\LibraryManagement\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\DEV\\YESTERDAY\\LibraryManagement\\Services\\Services.csproj",
+        "projectUniqueName": "c:\\DEV\\YESTERDAY\\LibraryManagement\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\Services\\Services.csproj",
+        "projectPath": "c:\\DEV\\YESTERDAY\\LibraryManagement\\Services\\Services.csproj",
         "packagesPath": "C:\\Users\\steph\\.nuget\\packages\\",
-        "outputPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\Services\\obj\\",
+        "outputPath": "c:\\DEV\\YESTERDAY\\LibraryManagement\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -247,8 +243,8 @@
               "C:\\DEV\\YESTERDAY\\LibraryManagement\\Data\\Data.csproj": {
                 "projectPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\Data\\Data.csproj"
               },
-              "C:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj": {
-                "projectPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj"
+              "c:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj": {
+                "projectPath": "c:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj"
               }
             }
           }
@@ -284,15 +280,11 @@
             },
             "Microsoft.AspNetCore.Cors": {
               "target": "Package",
-              "version": "(, )"
+              "version": "[2.3.0, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
-              "target": "Package",
-              "version": "[9.0.8, )"
-            },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[9.0.8, )"
             },

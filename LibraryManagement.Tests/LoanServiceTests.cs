@@ -2,7 +2,6 @@ using Data;
 using Microsoft.EntityFrameworkCore;
 using Models;
 using Services;
-using Xunit;
 
 namespace LibraryManagement.Tests;
 
