@@ -31,6 +31,9 @@ builder.Services.AddCors(options =>
         });
 });
 
+builder.Services.AddScoped<DialogService>();
+builder.Services.AddScoped<NotificationService>();
+builder.Services.AddScoped<BookService>();
 
 builder.Services.AddApiAuthorization();
 builder.Services.AddScoped<BookService>();

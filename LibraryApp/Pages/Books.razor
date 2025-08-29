@@ -20,16 +20,16 @@
         <RadzenDataGridColumn Title="Actions" Width="150px">
             <Template Context="book">
                 <RadzenButton ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Small" Text="Edit" Click="@(() => EditBook(book))" />
-                <RadzenButton ButtonStyle="ButtonStyle.Danger" Size="ButtonSize.Small" Text="Delete" Click="@(() => DeleteBook(book))" />
+                <RadzenButton ButtonStyle="ButtonStyle.Danger" Size="ButtonSize.Small" Text="Delete" Click="@(() => DeleteBook(book))" Style="margin-left:8px" />
             </Template>
         </RadzenDataGridColumn>
     </Columns>
 </RadzenDataGrid>
 
-<RadzenButton Text="Add Book" Click="AddBook" />
+<RadzenButton Text="Add Book" Click="@AddBook" Style="margin-top:12px" />
 
 @code {
-    List<Book> books = [];
+    List<Book> books = new List<Book>();
     RadzenDataGrid<Book> grid = null!;
 
     protected override async Task OnInitializedAsync()
@@ -38,7 +38,7 @@
     }
 
     async Task AddBook()
-    
+    {
         var result = await DialogService.OpenAsync<BookForm>("Add Book", new Dictionary<string, object> { { "Book", new Book() } });
         if (result is Book newBook)
         {
