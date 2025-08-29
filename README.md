@@ -24,7 +24,8 @@ The app creates a in-memory database (library.db) and seeds initial data on firs
 - Unit tests for services covering key business rules.
 to run test open cmd in project root folder 
 - **dotnet test**
-- ![img.png](img.png)
+- <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2ea2e1d1-3fa0-442d-9d2c-618c00231874" />
+
 
 ## Notes
 - Use the sidebar to navigate to Books, Lenders, or Loans.
@@ -33,4 +34,8 @@ to run test open cmd in project root folder
 # LibraryManagement
 System sequence diagram
 
-![Component Interaction Diagram.png](Component%20Interaction%20Diagram.png)
+<img width="1912" height="1007" alt="image" src="https://github.com/user-attachments/assets/f652032a-25b3-4354-87e3-2d6d9aec4bbe" />
+<img width="1917" height="1007" alt="image" src="https://github.com/user-attachments/assets/3fd56011-6d55-48d1-b178-143efc4e7249" />
+<img width="1917" height="1000" alt="image" src="https://github.com/user-attachments/assets/5df334ca-bcef-4626-90a2-d7db5c50ca22" />
+
+
