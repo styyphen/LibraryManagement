@@ -1,8 +1,6 @@
 @using Models
 @inject DialogService DialogService
 
-<RadzenDialog>
-    <ChildContent>
         <EditForm Model="@Lender" OnValidSubmit="Submit">
             <DataAnnotationsValidator />
             <ValidationSummary />
@@ -20,8 +18,6 @@
                 </RadzenStack>
             </RadzenStack>
         </EditForm>
-    </ChildContent>
-</RadzenDialog>
 
 @code {
     [Parameter] public Lender Lender { get; set; } = new();

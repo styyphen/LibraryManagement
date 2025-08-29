@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "LibraryApp",
   "resources": {
-    "hash": "sha256-DAFPNqmZezPW/4s8cJe80i+x7ju/X/DLve3n10U97Io=",
+    "hash": "sha256-H2+XqATCspxm1ygYOJ+o90qGshT1oDc0nndeWZwAxec=",
     "fingerprinting": {
       "Humanizer.oqup3v7t3k.wasm": "Humanizer.wasm",
       "Microsoft.AspNetCore.Authorization.tnyc7xpluy.wasm": "Microsoft.AspNetCore.Authorization.wasm",
@@ -302,14 +302,14 @@
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
       "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
-      "LibraryManagement.Data.433hl2xsij.wasm": "LibraryManagement.Data.wasm",
-      "Models.7zxit1kreq.wasm": "Models.wasm",
-      "Services.150w6gp393.wasm": "Services.wasm",
-      "Models.uiugx2fbzy.pdb": "Models.pdb",
-      "LibraryManagement.Data.nck255igz4.pdb": "LibraryManagement.Data.pdb",
-      "Services.v1d4lndl8d.pdb": "Services.pdb",
-      "LibraryApp.gurhehhimo.wasm": "LibraryApp.wasm",
-      "LibraryApp.5tnraep1x0.pdb": "LibraryApp.pdb"
+      "LibraryManagement.Data.7g18zx439r.wasm": "LibraryManagement.Data.wasm",
+      "Models.ooblj6iln6.wasm": "Models.wasm",
+      "Services.57o2tgj8oa.wasm": "Services.wasm",
+      "Models.gka84czqkf.pdb": "Models.pdb",
+      "LibraryManagement.Data.8uuwpxbq5f.pdb": "LibraryManagement.Data.pdb",
+      "Services.vnhphv2dw5.pdb": "Services.pdb",
+      "LibraryApp.xbkje7s1ls.wasm": "LibraryApp.wasm",
+      "LibraryApp.3kh9aubabk.pdb": "LibraryApp.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.50iqa8w3ys.js": "sha256-pQdXuxfVeqYHOwd5HUM2ERd7OnXirj9JTF37b6OdTAc="
@@ -555,16 +555,16 @@
       "WindowsBase.361km0836k.wasm": "sha256-FacUCEIJYTnbOWgX/R9QP2QnurqRZwRIkDAH0N9z69s=",
       "mscorlib.qiu3j3msqk.wasm": "sha256-QvztpxTOEw4aMIl7zP3QtsPLNv/IWaK5wq22J4ReGrA=",
       "netstandard.lp03u0xxi4.wasm": "sha256-WVQsxULiAiEbyXLKolS7txnWVT82SsvsuMe4jJ+SqqI=",
-      "LibraryManagement.Data.433hl2xsij.wasm": "sha256-IEnWq+7DbFnXQ6fNGTjj/uxm6SDLE9yjDsIYUnGSCFk=",
-      "Models.7zxit1kreq.wasm": "sha256-g12D6wm3SaNRv6MIBYa1w63Hcb7D2qM1SPjAKgS6OQs=",
-      "Services.150w6gp393.wasm": "sha256-S+E84LgPS4ub/e/Cp6pItuhTQhujpnMVZ5rs6uV9vo8=",
-      "LibraryApp.gurhehhimo.wasm": "sha256-yBbhO54+W326PLIPwAnyMerNkF0BZLyWhTGc/RiCrts="
+      "LibraryManagement.Data.7g18zx439r.wasm": "sha256-qR9+DMNg9t3R2LdXh6M0d/0lf3ulotzoZcJv9/9U+bE=",
+      "Models.ooblj6iln6.wasm": "sha256-aFkfUzcbCNUjq3awakjdMFS97UHlRrN7TvZZOODX3ko=",
+      "Services.57o2tgj8oa.wasm": "sha256-AZRjWUQJ9YEkodluAzlI3B+eZiQCIRi8Bqi8c+bDkUs=",
+      "LibraryApp.xbkje7s1ls.wasm": "sha256-rTf4ChyXuYQpKzsECMGR273DTGLw6/b1A9q+me+8dZc="
     },
     "pdb": {
-      "Models.uiugx2fbzy.pdb": "sha256-eki3DOqSTwrrdcz0L+epdO/ewfVAmnalPqaSiTisyoA=",
-      "LibraryManagement.Data.nck255igz4.pdb": "sha256-h0zNqjmt/lp40H7S4PVud/FoxkxHWYpOWk21KDtWTjU=",
-      "Services.v1d4lndl8d.pdb": "sha256-7eNSVaWFB3mnK6c9nQPTedvT4aJuc0xxZ0yEOXulvd0=",
-      "LibraryApp.5tnraep1x0.pdb": "sha256-ScPwCO7Ib7FNb3x7uuSwlrRDqZYKbjIvKJUgty6aDuI="
+      "Models.gka84czqkf.pdb": "sha256-gDSy2bD6XajQ/EH6dBzrv90gVVL+amg9oHZ0FaXSTN8=",
+      "LibraryManagement.Data.8uuwpxbq5f.pdb": "sha256-4I6P+1dE8zuuecnFxsdOTofbz9R4YUuG6SIzymCNQjI=",
+      "Services.vnhphv2dw5.pdb": "sha256-Ve1EyZJnzqzS9Mo+4B/few5pzZ2bdink5icsYuNVu5U=",
+      "LibraryApp.3kh9aubabk.pdb": "sha256-I3O1AkcFZudxj/dIdStMwyDef0NHHrtp+u8Xmy2OW5Q="
     },
     "satelliteResources": {
       "cs": {

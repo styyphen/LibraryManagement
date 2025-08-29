@@ -3,12 +3,12 @@
 <RadzenLayout>
     <RadzenHeader>
         <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0">
-            <RadzenSidebarToggle Click="@(() => sidebarExpanded = !sidebarExpanded)" />
+            <RadzenSidebarToggle Click="@(() => _sidebarExpanded = !_sidebarExpanded)" />
             <RadzenLabel Text="Library Management" />
         </RadzenStack>
     </RadzenHeader>
     <RadzenSidebar Responsive="false" Style="width: max-content">
-        <RadzenPanelMenu DisplayStyle="@(sidebarExpanded ? MenuItemDisplayStyle.IconAndText : MenuItemDisplayStyle.Icon)" ShowArrow="false">
+        <RadzenPanelMenu DisplayStyle="@(_sidebarExpanded ? MenuItemDisplayStyle.IconAndText : MenuItemDisplayStyle.Icon)" ShowArrow="false">
             <RadzenPanelMenuItem Text="Overview" Icon="home" />
             <RadzenPanelMenuItem Text="Dashboard" Icon="dashboard" />
             <RadzenPanelMenuItem Text="Books" Path="books" />
@@ -24,10 +24,14 @@
         </div>
     </RadzenBody>
     <RadzenFooter>
-        Footer
+        <RadzenFooter>
+            <div style="width:100%;display:flex;align-items:center;justify-content:center;">
+            Luhl.Inc &nbsp;© @DateTime.Now.Year&nbsp;-&nbsp; Library Management. All rights reserved.
+            </div>
+        </RadzenFooter>
     </RadzenFooter>
 </RadzenLayout>
 
 @code {
-    bool sidebarExpanded = true;
+    bool _sidebarExpanded = true;
 }

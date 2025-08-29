@@ -1,41 +1,66 @@
 @using Models
 @using Services
+@using System.ComponentModel.DataAnnotations
 @inject DialogService DialogService
 @inject BookService BookService
 @inject LenderService LenderService
 
-<RadzenDialog>
-    <ChildContent>
-        <RadzenStack Gap="1rem">
-            <RadzenFormField Text="Book" Variant="Variant.Outlined">
-                <RadzenDropDown Data="@books" TextProperty="Title" ValueProperty="Id" @bind-Value="selectedBookId" AllowFiltering="true" />
-            </RadzenFormField>
-            <RadzenFormField Text="Lender" Variant="Variant.Outlined">
-                <RadzenDropDown Data="@lenders" TextProperty="FullName" ValueProperty="Id" @bind-Value="selectedLenderId" AllowFiltering="true" />
-            </RadzenFormField>
-            <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.End" Gap="0.5rem">
-                <RadzenButton Text="Create Loan" />
-                <RadzenButton ButtonStyle="ButtonStyle.Secondary" Text="Cancel" Click="Cancel" />
-            </RadzenStack>
+<EditForm Model="@_loan" OnValidSubmit="Submit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <RadzenStack Gap="1rem">
+        <RadzenFormField Text="Book" Variant="Variant.Outlined">
+            <RadzenDropDown Data="@_books"
+                            TextProperty="Title"
+                            ValueProperty="Id"
+                            @bind-Value="_loan.BookId"
+                            AllowFiltering="true"
+                            Placeholder="Select a book" />
+            <ValidationMessage For="@(() => _loan.BookId)" />
+        </RadzenFormField>
+
+        <RadzenFormField Text="Lender" Variant="Variant.Outlined">
+            <RadzenDropDown Data="@_lenders"
+                            TextProperty="FullName"
+                            ValueProperty="Id"
+                            @bind-Value="_loan.LenderId"
+                            AllowFiltering="true"
+                            Placeholder="Select a lender" />
+            <ValidationMessage For="@(() => _loan.LenderId)" />
+        </RadzenFormField>
+
+        <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.End" Gap="0.5rem">
+            <RadzenButton ButtonType="ButtonType.Submit" Text="Create Loan" />
+            <RadzenButton ButtonStyle="ButtonStyle.Secondary" Text="Cancel" Click="@Cancel" />
         </RadzenStack>
-    </ChildContent>
-</RadzenDialog>
+    </RadzenStack>
+</EditForm>
 
 @code {
-    List<Book> books = [];
-    List<Lender> lenders = [];
-    int selectedBookId;
-    int selectedLenderId;
+    class LoanCreateModel
+    {
+        [Required(ErrorMessage = "Book is required")]
+        public int? BookId { get; set; }
+
+        [Required(ErrorMessage = "Lender is required")]
+        public int? LenderId { get; set; }
+    }
+
+    List<Book> _books = new();
+    List<Lender> _lenders = new();
+    LoanCreateModel _loan = new();
 
     protected override async Task OnInitializedAsync()
     {
-        books = await BookService.GetAllAsync();
-        lenders = await LenderService.GetAllAsync();
+        _books = await BookService.GetAllAsync();
+        _lenders = await LenderService.GetAllAsync();
     }
 
-    async Task Submit()
+    Task Submit()
     {
-       // await DialogService.CloseAsync((selectedBookId, selectedLenderId));
+        DialogService.Close((_loan.BookId!.Value, _loan.LenderId!.Value));
+        return Task.CompletedTask;
     }
 
     void Cancel()
