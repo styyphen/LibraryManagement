@@ -4,9 +4,12 @@
 The solution is structured into:
 - **LibraryApp**: Blazor Web App with UI (Pages, Components, Shared).
 - **Models**: Entity classes with DataAnnotations for validation.
-- **Data**: EF Core DbContext and seeding logic.
+- **LibraryManagement.Data**: EF Core DbContext and seeding logic.
 - **Services**: Business logic for CRUD and loan rules.
 - **LibraryManagement.Tests**: xUnit tests for services.
+- **LibraryManagement.Host**  hosts the app to allow smooth debugging experience 
+- **LibraryManagement.Server** Wraps the Radzen app on a razor web app
+- 
 This separation ensures maintainability and scalability (e.g., easy to add APIs).
 
 ## Validation and Rules Enforcement
