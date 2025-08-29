@@ -33,7 +33,9 @@ to run test open cmd in project root folder
 - Tests use an in-memory database for isolation.
 # LibraryManagement
 System sequence diagram
+<img width="5478" height="2832" alt="Component Interaction Diagram" src="https://github.com/user-attachments/assets/de6e95f4-ed93-458e-a25d-ebf1750d6d4c" />
 
+# System Screens
 <img width="1912" height="1007" alt="image" src="https://github.com/user-attachments/assets/f652032a-25b3-4354-87e3-2d6d9aec4bbe" />
 <img width="1917" height="1007" alt="image" src="https://github.com/user-attachments/assets/3fd56011-6d55-48d1-b178-143efc4e7249" />
 <img width="1917" height="1000" alt="image" src="https://github.com/user-attachments/assets/5df334ca-bcef-4626-90a2-d7db5c50ca22" />
