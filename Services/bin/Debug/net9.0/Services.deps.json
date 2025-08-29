@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v9.0": {
       "Services/1.0.0": {
         "dependencies": {
-          "Data": "1.0.0",
+          "LibraryManagement.Data": "1.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly": "9.0.8",
           "Microsoft.AspNetCore.Components.WebAssembly.Authentication": "9.0.8",
           "Microsoft.AspNetCore.Components.WebAssembly.DevServer": "9.0.0",
@@ -893,7 +893,7 @@
       "System.Text.Encodings.Web/8.0.0": {},
       "System.Text.Json/9.0.8": {},
       "System.Threading.Channels/7.0.0": {},
-      "Data/1.0.0": {
+      "LibraryManagement.Data/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Components.WebAssembly": "9.0.8",
           "Microsoft.AspNetCore.Components.WebAssembly.Authentication": "9.0.8",
@@ -903,7 +903,7 @@
           "Radzen.Blazor": "5.0.0"
         },
         "runtime": {
-          "Data.dll": {
+          "LibraryManagement.Data.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1421,7 +1421,7 @@
       "path": "system.threading.channels/7.0.0",
       "hashPath": "system.threading.channels.7.0.0.nupkg.sha512"
     },
-    "Data/1.0.0": {
+    "LibraryManagement.Data/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -4,14 +4,14 @@
     "C:\\DEV\\YESTERDAY\\LibraryManagement\\LibraryManagement.Tests\\LibraryManagement.Tests.csproj": {}
   },
   "projects": {
-    "C:\\DEV\\YESTERDAY\\LibraryManagement\\Data\\Data.csproj": {
+    "C:\\DEV\\YESTERDAY\\LibraryManagement\\LibraryManagement.Data\\LibraryManagement.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\DEV\\YESTERDAY\\LibraryManagement\\Data\\Data.csproj",
-        "projectName": "Data",
-        "projectPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\Data\\Data.csproj",
+        "projectUniqueName": "C:\\DEV\\YESTERDAY\\LibraryManagement\\LibraryManagement.Data\\LibraryManagement.Data.csproj",
+        "projectName": "LibraryManagement.Data",
+        "projectPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\LibraryManagement.Data\\LibraryManagement.Data.csproj",
         "packagesPath": "C:\\Users\\steph\\.nuget\\packages\\",
-        "outputPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\Data\\obj\\",
+        "outputPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\LibraryManagement.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -140,8 +140,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\DEV\\YESTERDAY\\LibraryManagement\\Data\\Data.csproj": {
-                "projectPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\Data\\Data.csproj"
+              "C:\\DEV\\YESTERDAY\\LibraryManagement\\LibraryManagement.Data\\LibraryManagement.Data.csproj": {
+                "projectPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\LibraryManagement.Data\\LibraryManagement.Data.csproj"
               },
               "C:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj": {
                 "projectPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj"
@@ -374,8 +374,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\DEV\\YESTERDAY\\LibraryManagement\\Data\\Data.csproj": {
-                "projectPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\Data\\Data.csproj"
+              "C:\\DEV\\YESTERDAY\\LibraryManagement\\LibraryManagement.Data\\LibraryManagement.Data.csproj": {
+                "projectPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\LibraryManagement.Data\\LibraryManagement.Data.csproj"
               },
               "C:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj": {
                 "projectPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj"

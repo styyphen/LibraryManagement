@@ -1098,6 +1098,28 @@
           "build/Microsoft.NET.Sdk.WebAssembly.Pack.targets": {}
         }
       },
+      "Microsoft.Win32.SystemEvents/9.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net9.0/Microsoft.Win32.SystemEvents.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "Mono.TextTemplating/3.0.0": {
         "type": "package",
         "dependencies": {
@@ -1289,6 +1311,31 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "System.Drawing.Common/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "9.0.0"
+        },
+        "compile": {
+          "lib/net9.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net9.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net9.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "System.IO.Pipelines/7.0.0": {
         "type": "package",
         "compile": {
@@ -1407,7 +1454,7 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Data/1.0.0": {
+      "LibraryManagement.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
@@ -1419,10 +1466,10 @@
           "Radzen.Blazor": "5.0.0"
         },
         "compile": {
-          "bin/placeholder/Data.dll": {}
+          "bin/placeholder/LibraryManagement.Data.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Data.dll": {}
+          "bin/placeholder/LibraryManagement.Data.dll": {}
         }
       },
       "Models/1.0.0": {
@@ -1445,7 +1492,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "Data": "1.0.0",
+          "LibraryManagement.Data": "1.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly": "9.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly.Authentication": "9.0.0",
           "Microsoft.AspNetCore.Cors": "2.3.0",
@@ -2557,6 +2604,22 @@
           "build/Microsoft.NET.Sdk.WebAssembly.Pack.targets": {}
         }
       },
+      "Microsoft.Win32.SystemEvents/9.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "Mono.TextTemplating/3.0.0": {
         "type": "package",
         "dependencies": {
@@ -2748,6 +2811,31 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "System.Drawing.Common/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "9.0.0"
+        },
+        "compile": {
+          "lib/net9.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net9.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net9.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "System.IO.Pipelines/7.0.0": {
         "type": "package",
         "compile": {
@@ -2860,7 +2948,7 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Data/1.0.0": {
+      "LibraryManagement.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
@@ -2872,10 +2960,10 @@
           "Radzen.Blazor": "5.0.0"
         },
         "compile": {
-          "bin/placeholder/Data.dll": {}
+          "bin/placeholder/LibraryManagement.Data.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Data.dll": {}
+          "bin/placeholder/LibraryManagement.Data.dll": {}
         }
       },
       "Models/1.0.0": {
@@ -2898,7 +2986,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "Data": "1.0.0",
+          "LibraryManagement.Data": "1.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly": "9.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly.Authentication": "9.0.0",
           "Microsoft.AspNetCore.Cors": "2.3.0",
@@ -5133,6 +5221,38 @@
         "tools/net9.0/Microsoft.NET.WebAssembly.Webcil.dll"
       ]
     },
+    "Microsoft.Win32.SystemEvents/9.0.0": {
+      "sha512": "z8FfGIaoeALdD+KF44A2uP8PZIQQtDGiXsOLuN8nohbKhkyKt7zGaZb+fKiCxTuBqG22Q7myIAioSWaIcOOrOw==",
+      "type": "package",
+      "path": "microsoft.win32.systemevents/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Win32.SystemEvents.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Win32.SystemEvents.targets",
+        "lib/net462/Microsoft.Win32.SystemEvents.dll",
+        "lib/net462/Microsoft.Win32.SystemEvents.xml",
+        "lib/net8.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net8.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/net9.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net9.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
+        "microsoft.win32.systemevents.9.0.0.nupkg.sha512",
+        "microsoft.win32.systemevents.nuspec",
+        "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.xml",
+        "runtimes/win/lib/net9.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net9.0/Microsoft.Win32.SystemEvents.xml",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "Mono.TextTemplating/3.0.0": {
       "sha512": "YqueG52R/Xej4VVbKuRIodjiAhV0HR/XVbLbNrJhCZnzjnSjgMJ/dCdV0akQQxavX6hp/LC6rqLGLcXeQYU7XA==",
       "type": "package",
@@ -5445,6 +5565,48 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "System.Drawing.Common/9.0.0": {
+      "sha512": "uoozjI3+dlgKh2onFJcz8aNLh6TRCPlLSh8Dbuljc8CdvqXrxHOVysJlrHvlsOCqceqGBR1wrMPxlnzzhynktw==",
+      "type": "package",
+      "path": "system.drawing.common/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Drawing.Common.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Drawing.Common.targets",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net462/System.Drawing.Common.dll",
+        "lib/net462/System.Drawing.Common.pdb",
+        "lib/net462/System.Drawing.Common.xml",
+        "lib/net8.0/System.Drawing.Common.dll",
+        "lib/net8.0/System.Drawing.Common.pdb",
+        "lib/net8.0/System.Drawing.Common.xml",
+        "lib/net8.0/System.Private.Windows.Core.dll",
+        "lib/net8.0/System.Private.Windows.Core.xml",
+        "lib/net9.0/System.Drawing.Common.dll",
+        "lib/net9.0/System.Drawing.Common.pdb",
+        "lib/net9.0/System.Drawing.Common.xml",
+        "lib/net9.0/System.Private.Windows.Core.dll",
+        "lib/net9.0/System.Private.Windows.Core.xml",
+        "lib/netstandard2.0/System.Drawing.Common.dll",
+        "lib/netstandard2.0/System.Drawing.Common.pdb",
+        "lib/netstandard2.0/System.Drawing.Common.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "system.drawing.common.9.0.0.nupkg.sha512",
+        "system.drawing.common.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.IO.Pipelines/7.0.0": {
       "sha512": "jRn6JYnNPW6xgQazROBLSfpdoczRw694vO5kKvMcNnpXuolEixUyw6IBuBs2Y2mlSX/LdLvyyWmfXhaI3ND1Yg==",
       "type": "package",
@@ -5719,10 +5881,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Data/1.0.0": {
+    "LibraryManagement.Data/1.0.0": {
       "type": "project",
-      "path": "../Data/Data.csproj",
-      "msbuildProject": "../Data/Data.csproj"
+      "path": "../LibraryManagement.Data/LibraryManagement.Data.csproj",
+      "msbuildProject": "../LibraryManagement.Data/LibraryManagement.Data.csproj"
     },
     "Models/1.0.0": {
       "type": "project",
@@ -5737,7 +5899,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "Data >= 1.0.0",
+      "LibraryManagement.Data >= 1.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 9.*",
       "Microsoft.AspNetCore.Components.WebAssembly.Authentication >= 9.*",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 9.0.0",
@@ -5748,7 +5910,8 @@
       "Microsoft.NET.Sdk.WebAssembly.Pack >= 9.0.8",
       "Models >= 1.0.0",
       "Radzen.Blazor >= 5.0.0",
-      "Services >= 1.0.0"
+      "Services >= 1.0.0",
+      "System.Drawing.Common >= 9.0.0"
     ]
   },
   "packageFolders": {
@@ -5758,11 +5921,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\DEV\\YESTERDAY\\LibraryManagement\\LibraryApp\\LibraryApp.csproj",
+      "projectUniqueName": "C:\\DEV\\YESTERDAY\\LibraryManagement\\LibraryApp\\LibraryApp.csproj",
       "projectName": "LibraryApp",
-      "projectPath": "c:\\DEV\\YESTERDAY\\LibraryManagement\\LibraryApp\\LibraryApp.csproj",
+      "projectPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\LibraryApp\\LibraryApp.csproj",
       "packagesPath": "C:\\Users\\steph\\.nuget\\packages\\",
-      "outputPath": "c:\\DEV\\YESTERDAY\\LibraryManagement\\LibraryApp\\obj\\",
+      "outputPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\LibraryApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -5783,14 +5946,14 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\DEV\\YESTERDAY\\LibraryManagement\\Data\\Data.csproj": {
-              "projectPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\Data\\Data.csproj"
+            "C:\\DEV\\YESTERDAY\\LibraryManagement\\LibraryManagement.Data\\LibraryManagement.Data.csproj": {
+              "projectPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\LibraryManagement.Data\\LibraryManagement.Data.csproj"
             },
-            "c:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj": {
-              "projectPath": "c:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj"
+            "C:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj": {
+              "projectPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj"
             },
-            "c:\\DEV\\YESTERDAY\\LibraryManagement\\Services\\Services.csproj": {
-              "projectPath": "c:\\DEV\\YESTERDAY\\LibraryManagement\\Services\\Services.csproj"
+            "C:\\DEV\\YESTERDAY\\LibraryManagement\\Services\\Services.csproj": {
+              "projectPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\Services\\Services.csproj"
             }
           }
         }
@@ -5855,6 +6018,10 @@
           "Radzen.Blazor": {
             "target": "Package",
             "version": "[5.0.0, )"
+          },
+          "System.Drawing.Common": {
+            "target": "Package",
+            "version": "[9.0.0, )"
           }
         },
         "imports": [

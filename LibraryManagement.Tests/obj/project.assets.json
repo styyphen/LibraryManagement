@@ -1849,7 +1849,7 @@
           "build/net6.0/xunit.runner.visualstudio.props": {}
         }
       },
-      "Data/1.0.0": {
+      "LibraryManagement.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
@@ -1861,10 +1861,10 @@
           "Radzen.Blazor": "5.0.0"
         },
         "compile": {
-          "bin/placeholder/Data.dll": {}
+          "bin/placeholder/LibraryManagement.Data.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Data.dll": {}
+          "bin/placeholder/LibraryManagement.Data.dll": {}
         }
       },
       "Models/1.0.0": {
@@ -1887,7 +1887,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "Data": "1.0.0",
+          "LibraryManagement.Data": "1.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly": "9.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly.Authentication": "9.0.0",
           "Microsoft.AspNetCore.Cors": "2.3.0",
@@ -5196,10 +5196,10 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "Data/1.0.0": {
+    "LibraryManagement.Data/1.0.0": {
       "type": "project",
-      "path": "../Data/Data.csproj",
-      "msbuildProject": "../Data/Data.csproj"
+      "path": "../LibraryManagement.Data/LibraryManagement.Data.csproj",
+      "msbuildProject": "../LibraryManagement.Data/LibraryManagement.Data.csproj"
     },
     "Models/1.0.0": {
       "type": "project",
@@ -5214,7 +5214,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "Data >= 1.0.0",
+      "LibraryManagement.Data >= 1.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 9.*",
       "Microsoft.AspNetCore.Components.WebAssembly.Authentication >= 9.*",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 9.0.0",
@@ -5263,8 +5263,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\DEV\\YESTERDAY\\LibraryManagement\\Data\\Data.csproj": {
-              "projectPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\Data\\Data.csproj"
+            "C:\\DEV\\YESTERDAY\\LibraryManagement\\LibraryManagement.Data\\LibraryManagement.Data.csproj": {
+              "projectPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\LibraryManagement.Data\\LibraryManagement.Data.csproj"
             },
             "C:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj": {
               "projectPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj"

@@ -38,7 +38,7 @@
     }
 
     async Task AddBook()
-    {
+    
         var result = await DialogService.OpenAsync<BookForm>("Add Book", new Dictionary<string, object> { { "Book", new Book() } });
         if (result is Book newBook)
         {

@@ -1394,7 +1394,7 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Data/1.0.0": {
+      "LibraryManagement.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
@@ -1406,10 +1406,10 @@
           "Radzen.Blazor": "5.0.0"
         },
         "compile": {
-          "bin/placeholder/Data.dll": {}
+          "bin/placeholder/LibraryManagement.Data.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Data.dll": {}
+          "bin/placeholder/LibraryManagement.Data.dll": {}
         }
       },
       "Models/1.0.0": {
@@ -4142,10 +4142,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Data/1.0.0": {
+    "LibraryManagement.Data/1.0.0": {
       "type": "project",
-      "path": "../Data/Data.csproj",
-      "msbuildProject": "../Data/Data.csproj"
+      "path": "../LibraryManagement.Data/LibraryManagement.Data.csproj",
+      "msbuildProject": "../LibraryManagement.Data/LibraryManagement.Data.csproj"
     },
     "Models/1.0.0": {
       "type": "project",
@@ -4155,7 +4155,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "Data >= 1.0.0",
+      "LibraryManagement.Data >= 1.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 9.*",
       "Microsoft.AspNetCore.Components.WebAssembly.Authentication >= 9.*",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 9.0.0",
@@ -4173,11 +4173,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\DEV\\YESTERDAY\\LibraryManagement\\Services\\Services.csproj",
+      "projectUniqueName": "C:\\DEV\\YESTERDAY\\LibraryManagement\\Services\\Services.csproj",
       "projectName": "Services",
-      "projectPath": "c:\\DEV\\YESTERDAY\\LibraryManagement\\Services\\Services.csproj",
+      "projectPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\Services\\Services.csproj",
       "packagesPath": "C:\\Users\\steph\\.nuget\\packages\\",
-      "outputPath": "c:\\DEV\\YESTERDAY\\LibraryManagement\\Services\\obj\\",
+      "outputPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4198,11 +4198,11 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\DEV\\YESTERDAY\\LibraryManagement\\Data\\Data.csproj": {
-              "projectPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\Data\\Data.csproj"
+            "C:\\DEV\\YESTERDAY\\LibraryManagement\\LibraryManagement.Data\\LibraryManagement.Data.csproj": {
+              "projectPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\LibraryManagement.Data\\LibraryManagement.Data.csproj"
             },
-            "c:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj": {
-              "projectPath": "c:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj"
+            "C:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj": {
+              "projectPath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj"
             }
           }
         }

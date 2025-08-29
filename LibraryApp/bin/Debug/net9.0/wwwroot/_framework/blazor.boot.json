@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "LibraryApp",
   "resources": {
-    "hash": "sha256-jRvjDCoDyQqTY5j86j2hlUN6BUlSbAFZNO0/Ae82Euw=",
+    "hash": "sha256-S5y6xci6P5OQ0kqm79E+64qEobuYL3TapI1rnK/jAx4=",
     "fingerprinting": {
       "Humanizer.oqup3v7t3k.wasm": "Humanizer.wasm",
       "Microsoft.AspNetCore.Authorization.tnyc7xpluy.wasm": "Microsoft.AspNetCore.Authorization.wasm",
@@ -49,6 +49,7 @@
       "Microsoft.JSInterop.oafygsa2yv.wasm": "Microsoft.JSInterop.wasm",
       "Microsoft.JSInterop.WebAssembly.c5whsk6cyh.wasm": "Microsoft.JSInterop.WebAssembly.wasm",
       "Microsoft.Net.Http.Headers.vhfw8f9f40.wasm": "Microsoft.Net.Http.Headers.wasm",
+      "Microsoft.Win32.SystemEvents.r5vp8cy76v.wasm": "Microsoft.Win32.SystemEvents.wasm",
       "Mono.TextTemplating.kzb422hul9.wasm": "Mono.TextTemplating.wasm",
       "Radzen.Blazor.8rj13g7450.wasm": "Radzen.Blazor.wasm",
       "System.CodeDom.d9ed66qd5a.wasm": "System.CodeDom.wasm",
@@ -57,6 +58,8 @@
       "System.Composition.Hosting.0febfkavod.wasm": "System.Composition.Hosting.wasm",
       "System.Composition.Runtime.540o4lzbq7.wasm": "System.Composition.Runtime.wasm",
       "System.Composition.TypedParts.krsbyeqaeb.wasm": "System.Composition.TypedParts.wasm",
+      "System.Drawing.Common.e9ggxjkqjx.wasm": "System.Drawing.Common.wasm",
+      "System.Private.Windows.Core.zhe0h333oa.wasm": "System.Private.Windows.Core.wasm",
       "System.Linq.Dynamic.Core.v56k5wbbs8.wasm": "System.Linq.Dynamic.Core.wasm",
       "Microsoft.CodeAnalysis.resources.vceumzhqml.wasm": "Microsoft.CodeAnalysis.resources.wasm",
       "Microsoft.CodeAnalysis.resources.to7s51asb6.wasm": "Microsoft.CodeAnalysis.resources.wasm",
@@ -299,14 +302,14 @@
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
       "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
-      "Data.ft9lvme16q.wasm": "Data.wasm",
-      "Models.yu5hebwf54.wasm": "Models.wasm",
-      "Services.ld2mwir4pf.wasm": "Services.wasm",
-      "Models.6ws491jcqd.pdb": "Models.pdb",
-      "Data.rvys9gy2c6.pdb": "Data.pdb",
-      "Services.zaylcoobvk.pdb": "Services.pdb",
-      "LibraryApp.u99pmcyudw.wasm": "LibraryApp.wasm",
-      "LibraryApp.7nscs8aeql.pdb": "LibraryApp.pdb"
+      "LibraryManagement.Data.vq53d8pvyz.wasm": "LibraryManagement.Data.wasm",
+      "Models.41a4c70ysr.wasm": "Models.wasm",
+      "Services.or5gv1j2p9.wasm": "Services.wasm",
+      "Models.2y56o16h5d.pdb": "Models.pdb",
+      "LibraryManagement.Data.m7z2h9j3b5.pdb": "LibraryManagement.Data.pdb",
+      "Services.v3merk38kn.pdb": "Services.pdb",
+      "LibraryApp.c5h7ei927g.wasm": "LibraryApp.wasm",
+      "LibraryApp.dv11gp5vzq.pdb": "LibraryApp.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.50iqa8w3ys.js": "sha256-pQdXuxfVeqYHOwd5HUM2ERd7OnXirj9JTF37b6OdTAc="
@@ -373,6 +376,7 @@
       "Microsoft.JSInterop.oafygsa2yv.wasm": "sha256-8KHde87s03YXh21jjvaLX0OAjPTeWpKn1jV7kf9GrvM=",
       "Microsoft.JSInterop.WebAssembly.c5whsk6cyh.wasm": "sha256-AHeFn5IBMJC1tI8hRNTBa4lyLko5J8AK64JFjeO/vVw=",
       "Microsoft.Net.Http.Headers.vhfw8f9f40.wasm": "sha256-jfXK+cfJd/PteHB+5Bay/NDY9b9VLvVw6G/Bm262Lpo=",
+      "Microsoft.Win32.SystemEvents.r5vp8cy76v.wasm": "sha256-Af6qUrehcWGtXldX+sjhtwx5HL2NNOz4OAJI3pY+1bo=",
       "Mono.TextTemplating.kzb422hul9.wasm": "sha256-UNDfdehUq+nBEhST6P/jpyMNO7rLZiAm4bgDkhGlQ6A=",
       "Radzen.Blazor.8rj13g7450.wasm": "sha256-RK0/9C/D3aVfMD+bxNvUIZ5UiiMUh6VLgy3Ys1EzQGI=",
       "System.CodeDom.d9ed66qd5a.wasm": "sha256-cQdhJKvu05R+Hld7jJ/zrF8Q63+E29jjQZiyaW9uGek=",
@@ -381,6 +385,8 @@
       "System.Composition.Hosting.0febfkavod.wasm": "sha256-vLypVCb0vtNQkU73ak1k2qk7gVgYOW0LHrsyST2zbyc=",
       "System.Composition.Runtime.540o4lzbq7.wasm": "sha256-awE3Jr5pbwn9iAoh4F0oq7MyLok9U0SrOX0I8OmtXD8=",
       "System.Composition.TypedParts.krsbyeqaeb.wasm": "sha256-YOCkCvQUNQEb8ELKQB6jJedO7J+GUNsTrV/TnFuYKrs=",
+      "System.Drawing.Common.e9ggxjkqjx.wasm": "sha256-UmOKXys2ycEew1eIehBnh1Ps4VWdgloSacnXu9l9r/w=",
+      "System.Private.Windows.Core.zhe0h333oa.wasm": "sha256-mSlUely/6iu2xeUC4F5asK7VmC1VhAjLpGAozZPSy4c=",
       "System.Linq.Dynamic.Core.v56k5wbbs8.wasm": "sha256-zY4O55eQ9gC1F0jl4MFsfpX6oCP3eabUwmK1PIrgx3Q=",
       "Microsoft.CSharp.a0tj0801uj.wasm": "sha256-ZobU8ljs7o2k0//qcW3DOp9zcv1I6t4stAKV/382d6E=",
       "Microsoft.VisualBasic.Core.t7wsificim.wasm": "sha256-519aGZDGEeHbVlTqdV9i1FWMuqlyXQTc4lkFvXhNfPM=",
@@ -549,16 +555,16 @@
       "WindowsBase.361km0836k.wasm": "sha256-FacUCEIJYTnbOWgX/R9QP2QnurqRZwRIkDAH0N9z69s=",
       "mscorlib.qiu3j3msqk.wasm": "sha256-QvztpxTOEw4aMIl7zP3QtsPLNv/IWaK5wq22J4ReGrA=",
       "netstandard.lp03u0xxi4.wasm": "sha256-WVQsxULiAiEbyXLKolS7txnWVT82SsvsuMe4jJ+SqqI=",
-      "Data.ft9lvme16q.wasm": "sha256-89siuVZgxfRwaWsSLOTR2KHHlxw5ILNTq8GnIVVvq10=",
-      "Models.yu5hebwf54.wasm": "sha256-Fi7LFIAyiu2nOopRzittv18z33wBYAFpsZDAZrBwXU4=",
-      "Services.ld2mwir4pf.wasm": "sha256-d/KnDuGh3ajTF95RW1OeaMEfDrkA4MrRdwY4JluDUqI=",
-      "LibraryApp.u99pmcyudw.wasm": "sha256-MiFOfVDGzp98WMqRAT8zsdu/sFTLuKZyXQZY7dQ/OMc="
+      "LibraryManagement.Data.vq53d8pvyz.wasm": "sha256-19wE1XYBqy5dFaboDHhk2F+qmTOSDYwWmF1gebaniv0=",
+      "Models.41a4c70ysr.wasm": "sha256-yJMdsqayYp1776o8lF+280n6TrJ8RrXqYuCWwRQK3iA=",
+      "Services.or5gv1j2p9.wasm": "sha256-zKsXq/RvktTVzJImcieqLOXqoDcHpWk8OHYAHCxyWtY=",
+      "LibraryApp.c5h7ei927g.wasm": "sha256-cEeJm2CiuijCzUUSjRvvw1q4dkRaZ39zn1eUv6Sx3/Y="
     },
     "pdb": {
-      "Models.6ws491jcqd.pdb": "sha256-RugbeQ59GukiqkhMjYjAX+up6dKm08SlKn/cANI9lFA=",
-      "Data.rvys9gy2c6.pdb": "sha256-adeZPwf4yv3zI/gTmU/3o3B/3y3ncYWn5aU7eSKfTKM=",
-      "Services.zaylcoobvk.pdb": "sha256-FTNYVP+1M1yawn9FUcWlIRWiXFEHkmkP+dnwPj5rQPs=",
-      "LibraryApp.7nscs8aeql.pdb": "sha256-A/gnn6FId4hIA9weIuVBxSlLhlCsv5RMXEzHoQpeaIA="
+      "Models.2y56o16h5d.pdb": "sha256-ZkA0N7txs0PL/ZeZksoUgbO2+u8czL1rrnNiR4Xd2DE=",
+      "LibraryManagement.Data.m7z2h9j3b5.pdb": "sha256-woOt5UISCsstefF2LrcKH75B/eTuVjVAApeNO7nBUd0=",
+      "Services.v3merk38kn.pdb": "sha256-lZ1tmagPXcXtRn/2xxNFNv7Dawq327OU82mLBvCMijg=",
+      "LibraryApp.dv11gp5vzq.pdb": "sha256-RxwbQjlRms/j+RI4loH8h/EuXA/BcBj5BFA8fEMUIbE="
     },
     "satelliteResources": {
       "cs": {

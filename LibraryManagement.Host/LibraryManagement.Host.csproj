@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>LibraryManagement.Host</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LibraryApp\LibraryApp.csproj" />
+    <ProjectReference Include="..\LibraryManagement.Data\LibraryManagement.Data.csproj" />
+    <ProjectReference Include="..\LibraryManagement.Server\LibraryManagement.Server.csproj" />
+  </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.*-*" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.*-*" />
+        <PackageReference Include="Microsoft.AspNetCore.OData" Version="9.*-*" />
+        <PackageReference Include="DocumentFormat.OpenXml" Version="2.20.0" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="*.db">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+</Project>

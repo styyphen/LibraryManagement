@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k1JF38jlvZc=",
+  "dgSpecHash": "M71sFcz05xQ=",
   "success": true,
-  "projectFilePath": "c:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj",
+  "projectFilePath": "C:\\DEV\\YESTERDAY\\LibraryManagement\\Models\\Models.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\steph\\.nuget\\packages\\dartsassbuilder\\1.0.0\\dartsassbuilder.1.0.0.nupkg.sha512",
     "C:\\Users\\steph\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
